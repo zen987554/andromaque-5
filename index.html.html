@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Andromaque – Scène 3</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'EB Garamond', serif;
+      background: #f9f4e8 url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      color: #3b2f2f;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fffef9;
+      border: 1px solid #d5c7a3;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    h1, h2 {
+      text-align: center;
+      border-bottom: 2px solid #8b5e3c;
+      padding-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+      text-align: justify;
+    }
+    .citation {
+      font-style: italic;
+      color: #6a5038;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .button {
+      background-color: #d6c4a0;
+      color: #3b2f2f;
+      padding: 0.6rem 1.2rem;
+      border: 1px solid #8b5e3c;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background-color: #e0ceb0;
+    }
+    .page {
+      display: none;
+    }
+    .page.active {
+      display: block;
+    }
+    .perso-img {
+      display: block;
+      margin: 1rem auto;
+      max-width: 60%;
+      border: 1px solid #8b5e3c;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="accueil" class="page active">
+      <h1>Andromaque</h1>
+      <p style="text-align:center;">Une lecture web de l'Acte I, Scène 3<br>Jean Racine – 1667</p>
+      <div class="buttons" style="justify-content: center;">
+        <button class="button" onclick="goTo('pyrrhus')">Commencer la lecture →</button>
+        <button class="button" onclick="goTo('pheonix')">Page de Phœnix</button>
+        <button class="button" onclick="goTo('andromaque')">Bonus : Andromaque</button>
+      </div>
+    </div>
+
+    <div id="pyrrhus" class="page">
+      <h2>Pyrrhus, roi d'Épire</h2>
+      <img class="perso-img" src="pyrrhus.jpg" alt="Statue antique de Pyrrhus">
+      <p>Pyrrhus est le fils du grand Achille, héros grec de la guerre de Troie. Il a hérité non seulement de sa bravoure, mais aussi de sa fierté et de sa passion fougueuse. Après la chute de Troie, il reçoit Andromaque, veuve d’Hector, comme captive. Très vite, il tombe amoureux d’elle, ce qui va provoquer un profond dilemme entre amour et devoir politique.</p>
+      <p>En tant que roi, il est censé remettre le fils d’Andromaque, Astyanax, aux Grecs, pour éviter tout risque de vengeance. Mais son amour pour Andromaque l’empêche d’obéir. Il tente alors de la convaincre de l’épouser, promettant de sauver son fils si elle accepte.</p>
+      <p>Pyrrhus est donc un personnage tragique, tiraillé entre la raison d'État, les menaces grecques, et ses propres sentiments. Plus il aime Andromaque, plus il s’éloigne de la logique politique, au risque de tout perdre.</p>
+      <div class="citation">« La Grèce veut un mort, moi, je veux qu’il vive. »</div>
+      <div class="buttons">
+        <button class="button" onclick="goTo('accueil')">← Accueil</button>
+        <button class="button" onclick="goTo('oreste')">Suivant →</button>
+      </div>
+    </div>
+
+    <div id="oreste" class="page">
+      <h2>Oreste, ambassadeur grec</h2>
+      <img class="perso-img" src="oreste.jpg" alt="Peinture d'Oreste">
+      <p>Oreste est le fils d’Agamemnon, roi de Mycènes et chef des armées grecques durant la guerre de Troie. Il est envoyé comme ambassadeur auprès de Pyrrhus pour réclamer qu’Astyanax soit livré aux Grecs. Cette mission est difficile, car Oreste est lui-même un homme tourmenté.</p>
+      <p>En réalité, Oreste est secrètement amoureux d’Hermione, promise à Pyrrhus. Il espère qu’en remplissant sa mission, il pourra ramener Hermione avec lui. Mais son amour n’est pas partagé, et cette tension émotionnelle le rend instable.</p>
+      <p>Comme tous les personnages de la pièce, Oreste est déchiré : il représente l’autorité grecque, mais agit aussi par jalousie et frustration. Il joue un rôle déterminant dans la tragédie qui se prépare.</p>
+      <div class="citation">« Je viens vous rappeler ce que veut la Grèce. »</div>
+      <div class="buttons">
+        <button class="button" onclick="goTo('pyrrhus')">← Retour</button>
+        <button class="button" onclick="goTo('pheonix')">Page de Phœnix →</button>
+      </div>
+    </div>
+
+    <div id="pheonix" class="page">
+      <h2>Phœnix, le conseiller</h2>
+      <img class="perso-img" src="phoenix.jpg" alt="Phœnix antique illustration">
+      <p>Phœnix est un personnage sage, discret mais essentiel. Dans la mythologie, il fut le précepteur d’Achille, et il accompagne aujourd’hui Pyrrhus, son fils. Il symbolise la tradition, la mémoire, et la voix de la raison dans un monde dirigé par la passion.</p>
+      <p>Dans la pièce, Phœnix tente d’intervenir auprès de Pyrrhus pour l’inciter à écouter la sagesse plutôt que ses émotions. Il comprend les dangers politiques qu’impliquent les décisions de son roi, et essaie de le prévenir des conséquences.</p>
+      <p>Malheureusement, il est souvent ignoré. Cela reflète le conflit entre la voix de l’expérience et l’arrogance de la jeunesse. Son rôle n’est pas de dominer l’intrigue, mais de rappeler, sans cesse, le chemin de la sagesse.</p>
+      <div class="citation">« Seigneur, écoutez la voix de la sagesse. »</div>
+      <div class="buttons">
+        <button class="button" onclick="goTo('oreste')">← Retour à Oreste</button>
+        <button class="button" onclick="goTo('andromaque')">→ Bonus : Andromaque</button>
+      </div>
+    </div>
+
+    <div id="andromaque" class="page">
+      <h2>Bonus – Qui est Andromaque ?</h2>
+      <img class="perso-img" src="endromaque.jpg" alt="Gravure d'Andromaque">
+      <p>Andromaque est l’un des personnages les plus tragiques de la pièce. Veuve d’Hector, prince troyen tué par Achille, elle est aujourd’hui captive de Pyrrhus, fils du meurtrier de son mari. Elle vit en exil, seule avec son fils Astyanax, dernier héritier de Troie.</p>
+      <p>Son dilemme est terrible : Pyrrhus veut l’épouser. S’il refuse, il menace de livrer son fils aux Grecs. S’il accepte, elle trahit la mémoire d’Hector, son amour éternel. Elle est donc piégée entre fidélité et instinct maternel.</p>
+      <p>Ce personnage incarne la douleur, la dignité et le courage. Elle ne choisit jamais la facilité. Son combat intérieur est au cœur de la pièce et rend la tragédie d’autant plus puissante. Jusqu’au bout, elle essaie de sauver ce qui reste de son passé sans renier ce qu’elle est.</p>
+      <div class="citation">« Mon cœur ne s’est point démenti dans le malheur. »</div>
+      <div class="buttons">
+        <button class="button" onclick="goTo('pheonix')">← Retour à Phœnix</button>
+        <button class="button" onclick="goTo('Scene 1 Acte 3')">→ Scene 1 Acte 3</button>
+      </div>
+    </div>
+
+ <div id="Scene 1 Acte 3" class="page">
+      <h2> Quel sont les personnage present dans cette scéne ?</h2>
+      <img class="perso-img" src="Scene.jpg" alt="Gravure d'Andromaque">
+      <p>Les personnage present dans cette scéne sont le roi d'Epire Pyrrhus sont conseillé Pheonix et l'Embasadeur Oreste dans quelle circanstance ses personnage important sont present.</p>
+      <p>Dans cette scène le roi d'Epire Pyrrhus et l'Embasadeur des grecs Oreste sont réuni en Epire dans une confrontation politique sur le sort d'Andromaque et de son fils Astyanax. D'un coté il y a Pyrrhus qui est amoureux d'Andromaque et qui souhaite se marier avec elle puis il ya Oreste qui souhaite .</p>
+      <div class="citation">« Mon cœur ne s’est point démenti dans le malheur. »</div>
+      <div class="buttons">
+        <button class="button" onclick="goTo('andromaque')">← Retour bonus : andromaque</button>
+        <button class="button" onclick="goTo('accueil')">🏠 Retour à l'accueil</button>
+  </div>
+
+  <script>
+    function goTo(pageId) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+      window.scrollTo(0, 0);
+    }
+  </script>
+</body>
+</html>
+
+
